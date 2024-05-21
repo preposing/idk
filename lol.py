@@ -1,12 +1,3 @@
-import subprocess
-
-# Install requests library if not installed
-try:
-    import requests
-except ImportError:
-    subprocess.check_call(["python", '-m', 'pip', 'install', 'requests'])
-    import requests
-
 def send_message_to_webhook(webhook_url, message):
     data = {
         "content": message
